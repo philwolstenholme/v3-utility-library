@@ -1190,7 +1190,7 @@ MarkerClusterer.prototype.addMarker = function (marker, opt_nodraw) {
 MarkerClusterer.prototype.addMarkers = function (markers, opt_nodraw) {
   var key;
   for (key in markers) {
-    if (markers.hasOwnProperty(key)) {
+    if (markers.hasOwnProperty(key) && key !== "length") {
       this.pushMarkerTo_(markers[key]);
     }
   }  
